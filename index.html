@@ -246,6 +246,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-802MGZ9XDK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-802MGZ9XDK', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -259,8 +297,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu951306205f1355d20cc61716fbad8605_482122_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu951306205f1355d20cc61716fbad8605_482122_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://leminhtr.github.io/">
 
@@ -283,8 +321,8 @@
   <meta property="og:site_name" content="Minh Tri LÊ">
   <meta property="og:url" content="https://leminhtr.github.io/">
   <meta property="og:title" content="Minh Tri LÊ">
-  <meta property="og:description" content="Industrial Ph.D. Student in Deep Learning"><meta property="og:image" content="https://leminhtr.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://leminhtr.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Industrial Ph.D. Student in Deep Learning"><meta property="og:image" content="https://leminhtr.github.io/images/icon_hu951306205f1355d20cc61716fbad8605_482122_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://leminhtr.github.io/images/icon_hu951306205f1355d20cc61716fbad8605_482122_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     <meta property="og:updated_time" content="2030-06-01T13:00:00&#43;00:00">
   
@@ -661,7 +699,7 @@
 a, button {
     pointer-events: all;
 }
-* { z-index: 2; }
+/** { z-index: 2; }*/
 .particle, .particle > canvas
 #particles-js {
 position: fixed;
@@ -669,7 +707,7 @@ position: fixed;
     height: 100%;
     left: 0px;
     top: 0px;
-z-index: 1;
+/*z-index: 1;*/
 }
 </style>
   <script>
@@ -1048,7 +1086,7 @@ My supervisors are <a href="http://edeforas.free.fr/" target="_blank" rel="noope
               <span>Grenoble, France</span>
             
           </div>
-          <div class="card-text"><p>Research on Deep Learning for micro-embedded systems supervised by <a href="http://edeforas.free.fr/">Etienne De Foras</a> <a href="https://invensense.tdk.com/">@TDK InvenSense</a> and <a href="https://www.julyanarbel.com/">Julyan Arbel</a> <a href="https://team.inria.fr/statify/research/">Statify</a> <a href="https://www.inria.fr/en/centre-inria-grenoble-rhone-alpes">@INRIA Grenoble Rhône-Alpes</a>.</p>
+          <div class="card-text"><p>Research on Deep Learning for micro-embedded systems supervised by <a href="http://edeforas.free.fr/">Etienne De Foras</a> <a href="https://invensense.tdk.com/">@TDK InvenSense</a> and <a href="https://www.julyanarbel.com/">Julyan Arbel</a>, <a href="https://team.inria.fr/statify/research/">Statify team</a> <a href="https://www.inria.fr/en/centre-inria-grenoble-rhone-alpes">@INRIA Grenoble Rhône-Alpes</a>.</p>
 <p><strong>Keywords</strong>: Neural Networks, TinyML, Model Compression, Edge Inference, Meta-Learning, Micro-embedded Systems, AutoML, NAS</p>
 </div>
         </div>
@@ -1295,6 +1333,17 @@ Objectives included:</p>
   
   
   
+  <div class="col-12 col-sm-4">
+    
+    <div class="featurette-icon"><img src="/images/icon-pack/cpptest.svg" alt="cpptest" class="svg-icon svg-baseline"></div>
+    
+    <h3>C++</h3>
+    <p>OOP, Design Pattern</p>
+  </div>
+  
+  
+  
+  
     
   
   <div class="col-12 col-sm-4">
@@ -1316,17 +1365,6 @@ Objectives included:</p>
     
     <h3>Web Development</h3>
     <p>TypeScript, Angular 5, Electron, Bootstrap, Travis-CI, REST API</p>
-  </div>
-  
-  
-  
-  
-  <div class="col-12 col-sm-4">
-    
-    <div class="featurette-icon"><img src="/images/icon-pack/c.svg" alt="c" class="svg-icon svg-baseline"></div>
-    
-    <h3>C++</h3>
-    <p>OOP, Design Pattern</p>
   </div>
   
   
