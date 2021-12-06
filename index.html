@@ -246,6 +246,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-802MGZ9XDK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-802MGZ9XDK', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -259,8 +297,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu951306205f1355d20cc61716fbad8605_482122_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu951306205f1355d20cc61716fbad8605_482122_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://leminhtr.github.io/">
 
@@ -283,8 +321,8 @@
   <meta property="og:site_name" content="Minh Tri LÊ">
   <meta property="og:url" content="https://leminhtr.github.io/">
   <meta property="og:title" content="Minh Tri LÊ">
-  <meta property="og:description" content="Industrial Ph.D. Student in Deep Learning"><meta property="og:image" content="https://leminhtr.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://leminhtr.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Industrial Ph.D. Student in Deep Learning"><meta property="og:image" content="https://leminhtr.github.io/images/icon_hu951306205f1355d20cc61716fbad8605_482122_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://leminhtr.github.io/images/icon_hu951306205f1355d20cc61716fbad8605_482122_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     <meta property="og:updated_time" content="2030-06-01T13:00:00&#43;00:00">
   
@@ -312,9 +350,14 @@
 
 
   
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-802MGZ9XDK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-
-
+  gtag('config', 'G-802MGZ9XDK');
+</script>
 
 
   <title>Minh Tri LÊ</title>
@@ -401,7 +444,7 @@
 
     
     
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
       <ul class="navbar-nav d-md-inline-flex">
@@ -587,14 +630,25 @@
   
 
   
-    
-  
-
-  
 
   
     
     
+      
+    
+    
+    
+    
+    
+      
+      
+    
+    
+  
+
+  
+    
+    
   
 
   
@@ -627,28 +681,45 @@
   
 
   
-  <section id="demo" class="home-section wg-blank dark " style="padding: 20px 0 20px 0;" >
-   <div class="home-section-bg " style="background-image: linear-gradient(DarkGreen, ForestGreen);"></div>
+  <section id="demo" class="home-section wg-blank dark " style="padding: 185px 0 235px 20px;" >
+   <div class="home-section-bg  bg-image parallax" style="background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url(&#39;https://leminhtr.github.io/media/background-min.jpg&#39;);background-size: cover;"></div>
     <div class="container">
 
     
       <div class="row  justify-content-center">
       
-        
-          <div class="col-12 section-heading text-center">
-            <h1>Academic Template</h1>
-            
-          </div>
-        
-      
     
 
       
 
 
 
-  <div class="col-12">
-    <h2 id="-welcome-to-the-academic-template">👋 Welcome to the Academic Template</h2>
+  <div class="col-12 col-lg-8">
+    <h2 id="-hello-there-and-welcome-to-my-homepage">👋 Hello there and welcome to my homepage!</h2>
+  <div id="particles-js"></div>
+<style type="text/css">
+#content {
+    pointer-events: none;
+}
+a, button {
+    pointer-events: all;
+}
+/** { z-index: 2; }*/
+.particle, .particle > canvas
+#particles-js {
+position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+/*z-index: 1;*/
+}
+</style>
+  <script>
+      particlesJS("particles-js", {
+       //your config 
+      });
+  </script>
 
   </div>
 
@@ -732,7 +803,7 @@
 
       
       
-      <img class="avatar avatar-circle" src="/author/minh-tri-le/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg" alt="Minh Tri LÊ">
+      <img class="avatar avatar-circle" src="/author/minh-tri-le/avatar_hu0df35f9d2bc2cd40dd390c217f2de9cf_194048_270x270_fill_q75_lanczos_center.jpg" alt="Minh Tri LÊ">
       
 
       <div class="portrait-title">
@@ -748,7 +819,7 @@
         
         <h3>
           <a href="https://team.inria.fr/statify/research/" target="_blank" rel="noopener">
-          <span>Statify @ INRIA Grenoble Rhône-Alpes</span>
+          <span>Statify @INRIA Grenoble Rhône-Alpes</span>
           </a>
         </h3>
         
@@ -802,23 +873,6 @@
           
         
         <li>
-          <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener" aria-label="graduation-cap">
-            <i class="fas fa-graduation-cap big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
           <a href="https://github.com/leminhtr" target="_blank" rel="noopener" aria-label="github">
             <i class="fab fa-github big-icon"></i>
           </a>
@@ -836,7 +890,7 @@
           
         
         <li>
-          <a href="https://www.linkedin.com/MinhTri-Le" target="_blank" rel="noopener" aria-label="linkedin">
+          <a href="https://www.linkedin.com/in/minhtri-le/" target="_blank" rel="noopener" aria-label="linkedin">
             <i class="fab fa-linkedin big-icon"></i>
           </a>
         </li>
@@ -848,12 +902,16 @@
   <div class="col-12 col-lg-8">
 
     
-    <h1>Biography</h1>
+    <h1>Bio</h1>
 
-    <p>Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</p>
+    <p>I am currently a second-year industrial (CIFRE) Ph.D. student in deep learning at <a href="https://invensense.tdk.com/" target="_blank" rel="noopener">TDK InvenSense France</a> and the <a href="https://www.inria.fr/en/centre-inria-grenoble-rhone-alpes" target="_blank" rel="noopener">INRIA Grenoble Rhône-Alpes</a> in the <a href="https://team.inria.fr/statify/research/" target="_blank" rel="noopener">Statify</a> research team.
+<br>
+In 2019, I graduated as an engineer in Computer Science &amp; Engineering specialized in <a href="https://www.utc.fr/en/courses-and-training/the-utc-engineering-diploma/computer-sciences-and-engineering-gi/specialty-decision-data-mining-gi-fdd.html" target="_blank" rel="noopener">Data Mining &amp; Decision Support</a> at the <a href="https://www.utc.fr/en.html" target="_blank" rel="noopener">Université de Technologie de Compiègne, France (UTC)</a>. In parallel of the last year of engineering course, I also obtained the Double European Master degree <a href="http://emecis.eu/" target="_blank" rel="noopener">EMECIS</a> in Machine Learning &amp; Optimization between the UTC and the <a href="https://scuolapolitecnica.unige.it/" target="_blank" rel="noopener">Scuola Politecnica di Genova, Italy</a>, to specialize in research. For my Master thesis, I worked as a research engineer intern in Deep Learning at InvenSense to get familiar with my Ph.D. subject.</p>
+<p>My research focuses on <strong>bringing the power of neural networks to very constrained micro-embedded systems</strong> <a href="">#TinyML</a>. My interests include <strong>general deep learning, model compression, pruning, knowledge distilliation, quantization, tinyML, edge inference</strong>&hellip;
+My supervisors are <a href="http://edeforas.free.fr/" target="_blank" rel="noopener">Etienne de Foras</a>, Sr. software engineer at InvenSense and <a href="https://www.julyanarbel.com/" target="_blank" rel="noopener">Julyan Arbel</a>, researcher at the INRIA.</p>
+<p>I am passionate about innovation, research, artificial intelligence, as well as software development in general. I have a deep interest to collaborate within rich multi-cultural settings.</p>
 <p>
-  <i class="fas fa-download  pr-1 fa-fw"></i> Download my <a href="/media/demo_resume.pdf" target="_blank">resumé</a>.</p>
+  <i class="fas fa-download  pr-1 fa-fw"></i> Check out my <a href="/media/cv.pdf" target="_blank">resumé here</a>.</p>
 
 
     <div class="row">
@@ -863,11 +921,19 @@
         <h3>Interests</h3>
         <ul class="ul-interests">
           
-          <li>Artificial Intelligence</li>
+          <li>Machine Learning</li>
           
-          <li>Computational Linguistics</li>
+          <li>TinyML &amp; All things model compression: Pruning, Quantization, Knowledge Distillation&hellip;</li>
           
-          <li>Information Retrieval</li>
+          <li>AutoML, NAS, Meta-Learning</li>
+          
+          <li>Edge Inference</li>
+          
+          <li>Traveling, Interculturality, Languages</li>
+          
+          <li>Hiking, Running, Table tennis</li>
+          
+          <li>Videography &amp; Photography</li>
           
         </ul>
       </div>
@@ -881,24 +947,32 @@
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">PhD in Artificial Intelligence, 2012</p>
-              <p class="institution">Stanford University</p>
+              <p class="course">Ph.D. in Deep Learning, 2020-2023</p>
+              <p class="institution">Université Grenoble Alpes</p>
             </div>
           </li>
           
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">MEng in Artificial Intelligence, 2009</p>
-              <p class="institution">Massachusetts Institute of Technology</p>
+              <p class="course">MSc. in Eng. in Computer Science &amp; Engineering, Data Mining &amp; Decision Support, 2019</p>
+              <p class="institution">Université de Technologie de Compiègne</p>
             </div>
           </li>
           
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">BSc in Artificial Intelligence, 2008</p>
-              <p class="institution">Massachusetts Institute of Technology</p>
+              <p class="course">MSc. in Computer Science, Machine Learning &amp; Optimization, 2019</p>
+              <p class="institution">Scuola Politecnica di Genova</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">MSc. in Computer Science, Machine Learning &amp; Optimization, 2019</p>
+              <p class="institution">Université de Technologie de Compiègne</p>
             </div>
           </li>
           
@@ -911,6 +985,262 @@
 </div>
 
 
+    
+
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="experience" class="home-section wg-experience  "  >
+   <div class="home-section-bg " ></div>
+    <div class="container">
+
+    
+      <div class="row  ">
+      
+        
+          <div class="col-12 col-lg-4 section-heading">
+            <h1>Experiences</h1>
+            
+          </div>
+        
+      
+    
+
+      
+
+
+
+
+<div class="col-12 col-lg-8">
+  
+
+  
+  
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col ">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border exp-fill">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title exp-title text-muted mt-0 mb-1">Ph.D Student in Deep Learning</h4>
+          <h4 class="card-title exp-company text-muted my-0"><a href="https://invensense.tdk.com/" target="_blank" rel="noopener">TDK InvenSense &amp; <a href="https://www.inria.fr/en/centre-inria-grenoble-rhone-alpes">INRIA</a></a></h4>
+          <div class="text-muted exp-meta">
+            Jun 2020 –
+            
+              Present
+            
+            
+              <span class="middot-divider"></span>
+              <span>Grenoble, France</span>
+            
+          </div>
+          <div class="card-text"><p>Research on Deep Learning for micro-embedded systems supervised by <a href="http://edeforas.free.fr/">Etienne De Foras</a> <a href="https://invensense.tdk.com/">@TDK InvenSense</a> and <a href="https://www.julyanarbel.com/">Julyan Arbel</a>, <a href="https://team.inria.fr/statify/research/">Statify team</a> <a href="https://www.inria.fr/en/centre-inria-grenoble-rhone-alpes">@INRIA Grenoble Rhône-Alpes</a>.</p>
+<p><strong>Keywords</strong>: Neural Networks, TinyML, Model Compression, Edge Inference, Meta-Learning, Micro-embedded Systems, AutoML, NAS</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title exp-title text-muted mt-0 mb-1">Research Engineer Intern in Deep Learning</h4>
+          <h4 class="card-title exp-company text-muted my-0"><a href="https://invensense.tdk.com/" target="_blank" rel="noopener">TDK InvenSense</a></h4>
+          <div class="text-muted exp-meta">
+            Feb 2019 –
+            
+              Aug 2019
+            
+            
+              <span class="middot-divider"></span>
+              <span>Grenoble, France</span>
+            
+          </div>
+          <div class="card-text"><p>Objectives included:</p>
+<ul>
+<li>Outperforming current classic algorithms inaccuracy, power consumption &amp; efficiency of the design cycle</li>
+<li>First application to fingerprints: classification of dry vs wet finger and detection of finger push or pull events</li>
+</ul>
+<p><strong>Keyword</strong>: Constrained/embedded neural networks, autoML, quantization</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title exp-title text-muted mt-0 mb-1">Web Developer Intern</h4>
+          <h4 class="card-title exp-company text-muted my-0"><a href="https://metadot.com/" target="_blank" rel="noopener">Das Keyboard, Metadot Corporation</a></h4>
+          <div class="text-muted exp-meta">
+            Sep 2017 –
+            
+              Feb 2018
+            
+            
+              <span class="middot-divider"></span>
+              <span>Austin, TX, USA</span>
+            
+          </div>
+          <div class="card-text"><p>Development of an application for a cloud connected keyboard.
+<br>
+Objectives included:</p>
+<ul>
+<li>Improved real-time communication latency with socket connection to receive signals from the cloud to the application in≈30ms</li>
+<li>Implemented and suggested new features: Dashboards for socket connections and task scheduler (with Angular 5)</li>
+<li>Manage data coming in and out from the cloud to the application.</li>
+<li>Collaborated in SCRUM &amp; Kanban agile framework</li>
+</ul>
+<p><strong>Keyword</strong>: Front end development, Back end development, Angular 4/5, JavaScript, TypeScript, HTML5, CSS3, Bootstrap, Nodejs, Electron, REST API, WebSocket</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col ">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title exp-title text-muted mt-0 mb-1">Research on data analysis and visualization of educational content for Faq2sciences.fr in a Scenari context</h4>
+          <h4 class="card-title exp-company text-muted my-0"><a href="https://scenari.kelis.fr/index.html" target="_blank" rel="noopener">Kelis</a></h4>
+          <div class="text-muted exp-meta">
+            Feb 2017 –
+            
+              Jul 2017
+            
+            
+              <span class="middot-divider"></span>
+              <span>Compiègne, France</span>
+            
+          </div>
+          <div class="card-text"><p>Preliminary research study for a CIFRE Ph.D. thesis supervised by Thibaut Arribe, Ph.D. <a href="https://scenari.kelis.fr/index.html">@Kelis</a> and <a href="https://stph.crzt.fr/co/stph.html">Stéphane Crozat</a>, research professor @Université de Technologie de Compiègne.
+<br> The goal was to propose and research what <em>states</em> (e.g. test average, variance, behaviors, hesitations&hellip;) could be recover from a large database of singular <em>events</em>, to design a learning dashboard for professors to help identifying first-year students difficulties in STEM for <a href="https://www.faq2sciences.fr/">Faq2sciences website</a> in a <a href="https://scenari.org/">Scenari</a> context. An <em>event</em> can be switching an answer, validate, coming back to previous questions&hellip; and contains a set of JSON attributes (e.g. timestamp, event nature, clicks, quizz values&hellip;) and may be noisy.
+<br>
+Objectives included:</p>
+<ul>
+<li>Analyzed data (test results, answering time) using ElasticSearch to understand student progress and behavior (≈75.000 quiz samples)</li>
+<li>Designed a learning dashboard from the analysis with Kibana and then Plotly, intended for an integration to Faq2sciences website.</li>
+</ul>
+<p><strong>Keywords</strong>: Research, Aggregation, Event-State recovery, Data analysis, Data visualization, Learning Dashboards, NoSQL</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+    
+      </div>
     
 
     </div>
@@ -986,10 +1316,10 @@
   
   <div class="col-12 col-sm-4">
     
-    <div class="featurette-icon"><i class="fab fa-r-project"></i></div>
+    <div class="featurette-icon"><i class="fab fa-python"></i></div>
     
-    <h3>R</h3>
-    <p>90%</p>
+    <h3>Python</h3>
+    <p>TensorFlow 2, PyTorch, Scikit-Learn, Numpy, Pandas&hellip; on PyCharm ❤️</p>
   </div>
   
   
@@ -999,10 +1329,21 @@
   
   <div class="col-12 col-sm-4">
     
-    <div class="featurette-icon"><i class="fas fa-chart-line"></i></div>
+    <div class="featurette-icon"><i class="fas fa-brain"></i></div>
     
-    <h3>Statistics</h3>
-    <p>100%</p>
+    <h3>Machine Learning</h3>
+    <p>Standard Machine Learning, Neural Networks: MLP, CNN, RNN&hellip; applied to Signal Processing, Image, Audio&hellip;</p>
+  </div>
+  
+  
+  
+  
+  <div class="col-12 col-sm-4">
+    
+    <div class="featurette-icon"><img src="/images/icon-pack/cpptest.svg" alt="cpptest" class="svg-icon svg-baseline"></div>
+    
+    <h3>C++</h3>
+    <p>OOP, Design Pattern</p>
   </div>
   
   
@@ -1012,176 +1353,41 @@
   
   <div class="col-12 col-sm-4">
     
-    <div class="featurette-icon"><i class="fas fa-camera-retro"></i></div>
+    <div class="featurette-icon"><i class="fas fa-code-branch"></i></div>
     
-    <h3>Photography</h3>
-    <p>10%</p>
+    <h3>Web Development</h3>
+    <p>TypeScript, Angular 5, Electron, Bootstrap, Travis-CI, REST API</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    
+    <div class="featurette-icon"><i class="fas fa-language"></i></div>
+    
+    <h3>Languages</h3>
+    <p>• Native French <br>• Fluent English <br>• Intermediate Italian &amp; Spanish <br>• Beginner Vietnamese, Mandarin &amp; Polish</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    
+    <div class="featurette-icon"><i class="fas fa-photo-video"></i></div>
+    
+    <h3>Videography &amp; Photography</h3>
+    <p>Adobe Premiere Pro, After Effect, Lightroom</p>
   </div>
   
 </div>
 
 
-    
-
-    </div>
-  </section>
-
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-
-  
-  <section id="experience" class="home-section wg-experience  "  >
-   <div class="home-section-bg " ></div>
-    <div class="container">
-
-    
-      <div class="row  ">
-      
-        
-          <div class="col-12 col-lg-4 section-heading">
-            <h1>Experience</h1>
-            
-          </div>
-        
-      
-    
-
-      
-
-
-
-
-<div class="col-12 col-lg-8">
-  
-
-  
-  
-  
-  <div class="row experience">
-    
-    <div class="col-auto text-center flex-column d-none d-sm-flex">
-      <div class="row h-50">
-        <div class="col ">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-      </div>
-      <div class="m-2">
-        <span class="badge badge-pill border exp-fill">&nbsp;</span>
-      </div>
-      <div class="row h-50">
-        <div class="col border-right">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-      </div>
-    </div>
-    
-    <div class="col py-2">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title exp-title text-muted mt-0 mb-1">CEO</h4>
-          <h4 class="card-title exp-company text-muted my-0">GenCoin</h4>
-          <div class="text-muted exp-meta">
-            Jan 2017 –
-            
-              Present
-            
-            
-              <span class="middot-divider"></span>
-              <span>California</span>
-            
-          </div>
-          <div class="card-text"><p>Responsibilities include:</p>
-<ul>
-<li>Analysing</li>
-<li>Modelling</li>
-<li>Deploying</li>
-</ul>
-</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="row experience">
-    
-    <div class="col-auto text-center flex-column d-none d-sm-flex">
-      <div class="row h-50">
-        <div class="col border-right">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-      </div>
-      <div class="m-2">
-        <span class="badge badge-pill border ">&nbsp;</span>
-      </div>
-      <div class="row h-50">
-        <div class="col ">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-      </div>
-    </div>
-    
-    <div class="col py-2">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title exp-title text-muted mt-0 mb-1">Professor</h4>
-          <h4 class="card-title exp-company text-muted my-0">University X</h4>
-          <div class="text-muted exp-meta">
-            Jan 2016 –
-            
-              Dec 2016
-            
-            
-              <span class="middot-divider"></span>
-              <span>California</span>
-            
-          </div>
-          <div class="card-text">Taught electronic engineering and researched semiconductor physics.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-</div>
-
-
-    
-      </div>
     
 
     </div>
@@ -1284,15 +1490,42 @@
     
 
     
+
+    
+
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
     <li>
-      <i class="fa-li fas fa-clock fa-2x" aria-hidden="true"></i>
-      <span></span>
+      <i class="fa-li fab fa-linkedin fa-2x" aria-hidden="true"></i>
+      <a href="https://www.linkedin.com/in/minhtri-le/" target="_blank" rel="noopener">/MinhTri-Le</a>
     </li>
     
-
     
-
     
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <i class="fa-li fab fa-github fa-2x" aria-hidden="true"></i>
+      <a href="https://github.com/leminhtr" target="_blank" rel="noopener">@leminhtr</a>
+    </li>
     
     
     
@@ -1307,7 +1540,7 @@
     
     <li>
       <i class="fa-li fab fa-twitter fa-2x" aria-hidden="true"></i>
-      <a href="https://twitter.com/le_minhtr" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://twitter.com/le_minhtr" target="_blank" rel="noopener">@le_minhtr</a>
     </li>
     
 
@@ -1337,7 +1570,7 @@
   
 
   <p class="powered-by">
-    © 2020
+    © Minh Tri LÊ, 2021
   </p>
 
   
@@ -1498,9 +1731,11 @@
       
     
     
+      
     
     
-    <script src="/js/wowchemy.min.ffabb05383f1b16d83e7181a605e644c.js"></script>
+    
+    <script src="/js/wowchemy.min.ded84bc29a60576fa9c16e666e48401d.js"></script>
 
     
 

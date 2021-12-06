@@ -246,6 +246,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-802MGZ9XDK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-802MGZ9XDK', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -257,8 +295,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu951306205f1355d20cc61716fbad8605_482122_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu951306205f1355d20cc61716fbad8605_482122_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://leminhtr.github.io/talk/example/">
 
@@ -349,9 +387,14 @@
 
 
   
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-802MGZ9XDK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-
-
+  gtag('config', 'G-802MGZ9XDK');
+</script>
 
 
   <title>Example Talk | Minh Tri LÊ</title>
@@ -438,7 +481,7 @@
 
     
     
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
       <ul class="navbar-nav d-md-inline-flex">
@@ -914,7 +957,7 @@
   <div class="media author-card content-widget-hr">
     
       
-      <a href="https://leminhtr.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/minh-tri-le/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg" alt="Minh Tri LÊ"></a>
+      <a href="https://leminhtr.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/minh-tri-le/avatar_hu0df35f9d2bc2cd40dd390c217f2de9cf_194048_270x270_fill_q75_lanczos_center.jpg" alt="Minh Tri LÊ"></a>
     
 
     <div class="media-body">
@@ -969,23 +1012,6 @@
       
     
     <li>
-      <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
-        <i class="fas fa-graduation-cap"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
       <a href="https://github.com/leminhtr" target="_blank" rel="noopener">
         <i class="fab fa-github"></i>
       </a>
@@ -1003,7 +1029,7 @@
       
     
     <li>
-      <a href="https://www.linkedin.com/MinhTri-Le" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/minhtri-le/" target="_blank" rel="noopener">
         <i class="fab fa-linkedin"></i>
       </a>
     </li>
@@ -1047,7 +1073,7 @@
   
 
   <p class="powered-by">
-    © 2020
+    © Minh Tri LÊ, 2021
   </p>
 
   
@@ -1208,9 +1234,11 @@
       
     
     
+      
     
     
-    <script src="/js/wowchemy.min.ffabb05383f1b16d83e7181a605e644c.js"></script>
+    
+    <script src="/js/wowchemy.min.ded84bc29a60576fa9c16e666e48401d.js"></script>
 
     
 

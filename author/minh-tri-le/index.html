@@ -246,6 +246,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-802MGZ9XDK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-802MGZ9XDK', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -259,8 +297,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu951306205f1355d20cc61716fbad8605_482122_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu951306205f1355d20cc61716fbad8605_482122_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://leminhtr.github.io/author/minh-tri-le/">
 
@@ -283,8 +321,8 @@
   <meta property="og:site_name" content="Minh Tri LÊ">
   <meta property="og:url" content="https://leminhtr.github.io/author/minh-tri-le/">
   <meta property="og:title" content="Minh Tri LÊ | Minh Tri LÊ">
-  <meta property="og:description" content="Industrial Ph.D. Student in Deep Learning"><meta property="og:image" content="https://leminhtr.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://leminhtr.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Industrial Ph.D. Student in Deep Learning"><meta property="og:image" content="https://leminhtr.github.io/images/icon_hu951306205f1355d20cc61716fbad8605_482122_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://leminhtr.github.io/images/icon_hu951306205f1355d20cc61716fbad8605_482122_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
   
@@ -298,9 +336,14 @@
 
 
   
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-802MGZ9XDK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-
-
+  gtag('config', 'G-802MGZ9XDK');
+</script>
 
 
   <title>Minh Tri LÊ | Minh Tri LÊ</title>
@@ -387,7 +430,7 @@
 
     
     
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
       <ul class="navbar-nav d-md-inline-flex">
@@ -572,7 +615,7 @@
 
       
       
-      <img class="avatar avatar-circle" src="/author/minh-tri-le/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg" alt="Minh Tri LÊ">
+      <img class="avatar avatar-circle" src="/author/minh-tri-le/avatar_hu0df35f9d2bc2cd40dd390c217f2de9cf_194048_270x270_fill_q75_lanczos_center.jpg" alt="Minh Tri LÊ">
       
 
       <div class="portrait-title">
@@ -588,7 +631,7 @@
         
         <h3>
           <a href="https://team.inria.fr/statify/research/" target="_blank" rel="noopener">
-          <span>Statify @ INRIA Grenoble Rhône-Alpes</span>
+          <span>Statify @INRIA Grenoble Rhône-Alpes</span>
           </a>
         </h3>
         
@@ -642,23 +685,6 @@
           
         
         <li>
-          <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener" aria-label="graduation-cap">
-            <i class="fas fa-graduation-cap big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
           <a href="https://github.com/leminhtr" target="_blank" rel="noopener" aria-label="github">
             <i class="fab fa-github big-icon"></i>
           </a>
@@ -676,7 +702,7 @@
           
         
         <li>
-          <a href="https://www.linkedin.com/MinhTri-Le" target="_blank" rel="noopener" aria-label="linkedin">
+          <a href="https://www.linkedin.com/in/minhtri-le/" target="_blank" rel="noopener" aria-label="linkedin">
             <i class="fab fa-linkedin big-icon"></i>
           </a>
         </li>
@@ -690,10 +716,14 @@
     
     
 
-    <p>Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</p>
+    <p>I am currently a second-year industrial (CIFRE) Ph.D. student in deep learning at <a href="https://invensense.tdk.com/" target="_blank" rel="noopener">TDK InvenSense France</a> and the <a href="https://www.inria.fr/en/centre-inria-grenoble-rhone-alpes" target="_blank" rel="noopener">INRIA Grenoble Rhône-Alpes</a> in the <a href="https://team.inria.fr/statify/research/" target="_blank" rel="noopener">Statify</a> research team.
+<br>
+In 2019, I graduated as an engineer in Computer Science &amp; Engineering specialized in <a href="https://www.utc.fr/en/courses-and-training/the-utc-engineering-diploma/computer-sciences-and-engineering-gi/specialty-decision-data-mining-gi-fdd.html" target="_blank" rel="noopener">Data Mining &amp; Decision Support</a> at the <a href="https://www.utc.fr/en.html" target="_blank" rel="noopener">Université de Technologie de Compiègne, France (UTC)</a>. In parallel of the last year of engineering course, I also obtained the Double European Master degree <a href="http://emecis.eu/" target="_blank" rel="noopener">EMECIS</a> in Machine Learning &amp; Optimization between the UTC and the <a href="https://scuolapolitecnica.unige.it/" target="_blank" rel="noopener">Scuola Politecnica di Genova, Italy</a>, to specialize in research. For my Master thesis, I worked as a research engineer intern in Deep Learning at InvenSense to get familiar with my Ph.D. subject.</p>
+<p>My research focuses on <strong>bringing the power of neural networks to very constrained micro-embedded systems</strong> <a href="">#TinyML</a>. My interests include <strong>general deep learning, model compression, pruning, knowledge distilliation, quantization, tinyML, edge inference</strong>&hellip;
+My supervisors are <a href="http://edeforas.free.fr/" target="_blank" rel="noopener">Etienne de Foras</a>, Sr. software engineer at InvenSense and <a href="https://www.julyanarbel.com/" target="_blank" rel="noopener">Julyan Arbel</a>, researcher at the INRIA.</p>
+<p>I am passionate about innovation, research, artificial intelligence, as well as software development in general. I have a deep interest to collaborate within rich multi-cultural settings.</p>
 <p>
-  <i class="fas fa-download  pr-1 fa-fw"></i> Download my <a href="/media/demo_resume.pdf" target="_blank">resumé</a>.</p>
+  <i class="fas fa-download  pr-1 fa-fw"></i> Check out my <a href="/media/cv.pdf" target="_blank">resumé here</a>.</p>
 
 
     <div class="row">
@@ -703,11 +733,19 @@
         <h3>Interests</h3>
         <ul class="ul-interests">
           
-          <li>Artificial Intelligence</li>
+          <li>Machine Learning</li>
           
-          <li>Computational Linguistics</li>
+          <li>TinyML &amp; All things model compression: Pruning, Quantization, Knowledge Distillation&hellip;</li>
           
-          <li>Information Retrieval</li>
+          <li>AutoML, NAS, Meta-Learning</li>
+          
+          <li>Edge Inference</li>
+          
+          <li>Traveling, Interculturality, Languages</li>
+          
+          <li>Hiking, Running, Table tennis</li>
+          
+          <li>Videography &amp; Photography</li>
           
         </ul>
       </div>
@@ -721,24 +759,32 @@
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">PhD in Artificial Intelligence, 2012</p>
-              <p class="institution">Stanford University</p>
+              <p class="course">Ph.D. in Deep Learning, 2020-2023</p>
+              <p class="institution">Université Grenoble Alpes</p>
             </div>
           </li>
           
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">MEng in Artificial Intelligence, 2009</p>
-              <p class="institution">Massachusetts Institute of Technology</p>
+              <p class="course">MSc. in Eng. in Computer Science &amp; Engineering, Data Mining &amp; Decision Support, 2019</p>
+              <p class="institution">Université de Technologie de Compiègne</p>
             </div>
           </li>
           
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">BSc in Artificial Intelligence, 2008</p>
-              <p class="institution">Massachusetts Institute of Technology</p>
+              <p class="course">MSc. in Computer Science, Machine Learning &amp; Optimization, 2019</p>
+              <p class="institution">Scuola Politecnica di Genova</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">MSc. in Computer Science, Machine Learning &amp; Optimization, 2019</p>
+              <p class="institution">Université de Technologie de Compiègne</p>
             </div>
           </li>
           
@@ -778,7 +824,7 @@
   
 
   <p class="powered-by">
-    © 2020
+    © Minh Tri LÊ, 2021
   </p>
 
   
@@ -939,9 +985,11 @@
       
     
     
+      
     
     
-    <script src="/js/wowchemy.min.ffabb05383f1b16d83e7181a605e644c.js"></script>
+    
+    <script src="/js/wowchemy.min.ded84bc29a60576fa9c16e666e48401d.js"></script>
 
     
 
