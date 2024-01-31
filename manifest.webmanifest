@@ -1,15 +1,15 @@
 {
-  "name": "Minh Tri LÊ",
-  "short_name": "Minh Tri LÊ",
+  "name": "Minh Tri LÊ, Ph.D.",
+  "short_name": "Minh Tri LÊ, Ph.D.",
   "lang": "en-us",
   "theme_color": "#2962ff",
   "background_color": "#2962ff",
   "icons": [{
-    "src": "/images/icon_hu951306205f1355d20cc61716fbad8605_482122_192x192_fill_lanczos_center_3.png",
+    "src": "/images/icon_hu0ee39d31c7703f5d6575dcd1918b57d3_7641_192x192_fill_lanczos_center_3.png",
     "sizes": "192x192",
     "type": "image/png"
     }, {
-    "src": "/images/icon_hu951306205f1355d20cc61716fbad8605_482122_512x512_fill_lanczos_center_3.png",
+    "src": "/images/icon_hu0ee39d31c7703f5d6575dcd1918b57d3_7641_512x512_fill_lanczos_center_3.png",
     "sizes": "512x512",
     "type": "image/png"
      }],
