@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remi Ponçot | Minh Tri LÊ, Ph.D.</title>
+    <link>https://leminhtr.github.io/author/remi-poncot/</link>
+      <atom:link href="https://leminhtr.github.io/author/remi-poncot/index.xml" rel="self" type="application/rss+xml" />
+    <description>Remi Ponçot</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Minh Tri LÊ, 2024</copyright><lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://leminhtr.github.io/images/icon_hu0ee39d31c7703f5d6575dcd1918b57d3_7641_512x512_fill_lanczos_center_3.png</url>
+      <title>Remi Ponçot</title>
+      <link>https://leminhtr.github.io/author/remi-poncot/</link>
+    </image>
+    
+    <item>
+      <title>Method for Improved Keyword Spotting</title>
+      <link>https://leminhtr.github.io/publication/methods_kws_patent/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://leminhtr.github.io/publication/methods_kws_patent/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

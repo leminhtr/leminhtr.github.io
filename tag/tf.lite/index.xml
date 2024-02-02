@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tf.lite | Minh Tri LÊ, Ph.D.</title>
+    <link>https://leminhtr.github.io/tag/tf.lite/</link>
+      <atom:link href="https://leminhtr.github.io/tag/tf.lite/index.xml" rel="self" type="application/rss+xml" />
+    <description>tf.lite</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Minh Tri LÊ, 2024</copyright><lastBuildDate>Mon, 08 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://leminhtr.github.io/images/icon_hu0ee39d31c7703f5d6575dcd1918b57d3_7641_512x512_fill_lanczos_center_3.png</url>
+      <title>tf.lite</title>
+      <link>https://leminhtr.github.io/tag/tf.lite/</link>
+    </image>
+    
+    <item>
+      <title>TinyMLOps for real-time ultra-low power MCUs applied to frame-based event classification</title>
+      <link>https://leminhtr.github.io/publication/tinymlops_euromlsys23/</link>
+      <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://leminhtr.github.io/publication/tinymlops_euromlsys23/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

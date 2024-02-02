@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julyan Arbel | Minh Tri LÊ, Ph.D.</title>
+    <link>https://leminhtr.github.io/author/julyan-arbel/</link>
+      <atom:link href="https://leminhtr.github.io/author/julyan-arbel/index.xml" rel="self" type="application/rss+xml" />
+    <description>Julyan Arbel</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Minh Tri LÊ, 2024</copyright><lastBuildDate>Sat, 11 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://leminhtr.github.io/images/icon_hu0ee39d31c7703f5d6575dcd1918b57d3_7641_512x512_fill_lanczos_center_3.png</url>
+      <title>Julyan Arbel</title>
+      <link>https://leminhtr.github.io/author/julyan-arbel/</link>
+    </image>
+    
+    <item>
+      <title>Efficient Neural Networks for Tiny Machine Learning: A Comprehensive Review.</title>
+      <link>https://leminhtr.github.io/publication/efficient_tinyml_review/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://leminhtr.github.io/publication/efficient_tinyml_review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regularization for Hybrid N-Bit Weight Quantization of Neural Networks on Ultra-Low Power Microcontrollers</title>
+      <link>https://leminhtr.github.io/publication/regularization_quantization_icann23/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://leminhtr.github.io/publication/regularization_quantization_icann23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TinyMLOps for real-time ultra-low power MCUs applied to frame-based event classification</title>
+      <link>https://leminhtr.github.io/publication/tinymlops_euromlsys23/</link>
+      <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://leminhtr.github.io/publication/tinymlops_euromlsys23/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
